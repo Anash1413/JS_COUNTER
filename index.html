@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <script src="https://kit.fontawesome.com/f8de085e30.js" crossorigin="anonymous"></script>
+    <style>
+        /* default hidden state */
+.share-page {
+    transform: scale(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+/* visible state */
+.active {
+    transform: scale(1);
+}
+
+.lallaguru {
+    display: none;
+    pointer-events: initial;
+}
+
+.lactive {
+    display: block;
+}
+
+        .first-circle{
+            box-shadow: 8px 8px 15px 0 red
+            ,  -8px -8px 15px 4px red;
+            animation: 4s infinite linear move;
+            transition: all 1s linear;
+           
+        }
+        @keyframes move {
+            0%{
+               left: 32%; 
+            }
+            
+            20%{
+                right:  82%;
+                top: 53%;
+            }  
+            40%{
+                left: 12%;
+                top: 79%;
+            }  
+            60%{
+                left: 8%;
+                top: 19%;
+            }  
+            80%{
+                right: 85%;
+                top: 22%;
+            }   
+            
+            100%{
+                left: 32%;
+            }
+            
+        }
+        .second-circle{
+            box-shadow: 8px 8px 15px 0 rgb(114, 76, 171)
+            ,  -8px -8px 15px 4px rgb(153, 98, 196);
+            animation: 4s infinite linear movel;
+            transition: all 1s linear;
+        }
+        @keyframes movel {
+            0%{
+               left: 59%; 
+               top: 63%;
+            }
+            
+            20%{
+                left: 62%;
+                top: 69%;
+            }  
+            40%{
+                left: 82%;
+                top: 49%;
+            }  
+            60%{
+                left: 32%;
+                top: 29%;
+            }  
+            80%{
+                right: 92%;
+                top: 12%;
+            }  
+            
+            100%{
+                 left: 59%; 
+               top: 63%;
+            }
+        }
+       
+    </style>
+  <link rel="stylesheet" crossorigin href="/assets/index-B8B_rD9O.css">
+</head>
+<body class="relative">
+    <div class="bg-black   flex items-center w-[100vw] h-[100vh] relative">
+
+          <div onclick="style.display='none'" class="lallaguru  absolute z-0 top-0 left-0 right-0 bottom-0 w-[100vw] h-[100vh] bg-gray-500 opacity-30   " ></div>
+
+
+        <!-- cicle strt  -->
+        <div class="w-[140px] h-[140px] absolute  top-[15%] left-[32%] first-circle  bg-red-700 rounded-full">
+         </div>    
+        <div class="w-[200px] h-[200px] absolute  top-[65%] left-[52%] second-circle  bg-purple-500 rounded-full">
+         </div>    
+          <!-- crcle enḍ  -->
+
+
+         <div class="card z-10 backdrop-blur-3xl flex flex-col gap-y-5 justify-center rounded-4xl items-center m-auto w-[400px] text-white h-[500px]">
+          
+            <div class="w-[150px] h-[150px] mx-auto  rounded-full border-4 border-white overflow-hidden">
+                <img   src="/assets/IMG_20250920_140050-CtHtkYu-.jpg" alt="">
+            </div>
+           
+            <h2>Maviz Ahmad</h2>
+            <h3>AKS UNIVERSITY SATNA M.P.</h3>
+            
+            <div class="flex gap-4">
+                <button onclick="active()" class="bg-gray-300 cursor-pointer hover:bg-gray-400 rounded-md p-2 text-black font-bold"><i class="fas fa-share"></i> Share profile</button>
+               <a href="https://github.com/Anash1413">
+                 <button onclick="" class="bg-gray-300 cursor-pointer hover:bg-gray-400 rounded-md p-2 text-black font-bold" ><i class="fas fa-user-plus"></i> Follow me</button>
+        
+               </a>     </div>
+         </div>
+         <!-- share page  -->
+         
+          <div class="share-page z-20 backdrop-blur-3xl   flex flex-col gap-y-5 text-2xl justify-center rounded-4xl items-center m-auto w-[500px] text-white h-[200px] absolute top-[40%] left-[35%]">
+           <div class=" w-full flex text-2xl text-white gap-3 justify-between"> <h4>Share this profile</h4>
+               <button class="cursor-pointer" onclick="close()"> Close Me</button>  
+           </div>
+            <div class="flex gap-x-9">
+                <button class=" cursor-pointer hover:bg-gray-400 rounded-md p-2 text-4xl font-bold" aria-label="facebook-"><i class="fab fa-facebook"></i> </button>
+                <button class=" cursor-pointer hover:bg-gray-400 rounded-md p-2  text-4xl font-bold" aria-label="facebook-"><i class="fab fa-twitter"></i> </button>
+                <button class=" cursor-pointer hover:bg-gray-400 rounded-md p-2  text-4xl font-bold" aria-label="facebook-" ><i class="fab fa-linkedin-in"></i> </button>
+                <button class=" cursor-pointer hover:bg-gray-400 rounded-md p-2  text-4xl font-bold" aria-label="facebook-"><i class="fab fa-whatsapp"></i> </button>
+                <button class=" cursor-pointer hover:bg-gray-400 rounded-md p-2  text-4xl font-bold" aria-label="facebook-"><i class="fab fa-instagram"></i> </button>
+
+            </div>
+          </div>
+          
+          
+    </div>
+     <script src="script.js"></script>
+</body>
+</html>
